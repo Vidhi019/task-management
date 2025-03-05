@@ -1,21 +1,16 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Tasks from "./Tasks"; // Ensure this component exists
-
+import Tasks from "./Tasks";
 const Home = () => {
   const [tasks, setTasks] = useState([]);
-  // const [error, setError] = useState(null);
   
 
   useEffect(() => {
     const fetchTasks = async () => {
       const token = localStorage.getItem("token");
 
-      // if (!token) {
-      //   setError("Unauthorized! Please log in.");
-      //   return;
-      // }
+    
 
       try {
         const response = await axios.get("http://localhost:3000/api/task/tasks", {
@@ -26,7 +21,7 @@ const Home = () => {
         });
         setTasks(response.data);
       } catch (err) {
-        // setError(err.response?.data?.message || "Failed to fetch tasks");
+        
         console.error("Error fetching tasks:", err);
       }
     };

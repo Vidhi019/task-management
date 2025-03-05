@@ -8,7 +8,6 @@ const Tasks = (props) => {
   return (
     < >
           <div className="tasks"></div>
-        {/* <h1>Task</h1> */}
     <div className="container">
       <Link className="link" to={`${link}/${task._id}`}>
         <h2 className="title">{task.title}</h2>
