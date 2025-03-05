@@ -6,7 +6,8 @@ const Tasks = (props) => {
   const { task ,link} = props;
 
   return (
-        <div >
+    < >
+          <div className="tasks"></div>
         {/* <h1>Task</h1> */}
     <div className="container">
       <Link className="link" to={`${link}/${task._id}`}>
@@ -20,7 +21,8 @@ const Tasks = (props) => {
 
       </Link>
     </div>
-    </div>
+  
+    </>
   );
 };
 
